@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    
+  <link rel="icon" type="image/x-icon" href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5iAHwt59XOgvKYnpcrPKCU6GOqMU5u1HJEp7Ig-as_yUfYKouWcnoWi7tU6eOrbCL_MOd0jaTIgC7ImfAK7pDs7OjJOO9lSH3DVUtTiL8zHwTpxQrTpoKchTPIs5YBCDpXURSkD5qgviRV7bX_z-PqFpStLJpBVL8vA0UoJhoPimSx7iTbj4dwA/s320/i.png'>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <style>
+        .image-thumbail {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .list-group-item a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body class="m-5">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+ 
+                    {% for p in res %}
+                    <div class="col-md-3">
+                        <div class="card my-2">
+                            <img class="image-thumbail" src="{{p}}" alt="Card image cap">
+                        </div>
+                    </div>
+                    {% empty %}
+                    <h3>No photos...</h3>
+                    {% endfor %}
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
